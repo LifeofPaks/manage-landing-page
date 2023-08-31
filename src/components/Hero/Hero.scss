@@ -1,0 +1,40 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.hero{
+    padding-inline: 10%;
+    display: flex;
+    align-items: center;
+    padding-block: 4%;
+    gap: 5%;
+    overflow: hidden;
+    .left{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h1{
+            font-size: 3rem;
+            color: $Dark-Blue;
+            opacity: 0;
+            animation: fadeIn 2s 1s forwards;
+        }
+        p{
+            width: 350px;
+            color: $Dark-Grayish-Blue;
+            line-height: 25px;
+            opacity: 0;
+            animation: fadeInUp 2s 1.2s forwards;
+        }
+
+        button{
+            opacity: 0;
+            animation: fadeInUp 2s 1.3s forwards;
+        }
+    }
+
+    .right{
+        opacity: 0;
+        animation: backInRight 2s 1.1s forwards;
+    }
+}

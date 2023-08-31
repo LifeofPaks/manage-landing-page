@@ -1,0 +1,28 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.navbar{
+    padding-inline: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 5%;
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        li{
+            font-size: 13px;
+            color: $Dark-Blue;
+            font-weight: 500;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover{
+                color: $Dark-Grayish-Blue;
+            }
+        }
+    }
+}

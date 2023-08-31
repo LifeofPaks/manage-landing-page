@@ -1,0 +1,75 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.testimonial{
+    padding-block: 5%;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+padding-inline: 5%;
+
+    h2{
+        font-size: 2.5rem;
+        color: $Dark-Blue;
+        opacity: 0;
+        animation: fadeIn 2s 4.5s forwards;
+    }
+
+    .cardWrapper{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+
+
+        .card{
+            background: #cccccc23;
+            text-align: center;
+            opacity: 0;
+            animation: backInLeft 3s forwards;
+
+            &.d1{
+                animation-delay: 4s;
+            }
+
+            &.d2{
+                animation-delay: 4.1s;
+            }
+
+            &.d3{
+                animation-delay: 4.2s;
+            }
+
+            &.d4{
+                animation-delay: 4.3s;
+            }
+
+            img{
+                width: 40px;
+                margin-top: -20px;
+                margin-bottom: 1rem;
+            }
+
+            h3{
+                font-size: .7rem;
+                color: $Dark-Blue;
+            }
+
+            p{
+                padding: 1.1rem;
+                padding-bottom: 1.5rem;
+                line-height: 18px;
+                font-size: 0.67rem;
+            }
+        }
+    }
+
+    button{
+        margin-top: 2rem;
+        opacity: 0;
+        animation: fadeInUp 1s 4.6s forwards;
+        
+    }
+}
