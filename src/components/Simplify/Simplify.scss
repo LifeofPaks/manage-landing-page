@@ -1,0 +1,55 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.simplify{
+    padding-inline: 10%;
+    margin-top: 5%;
+    padding-block: 5%;
+    background: $Bright-Red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../../images/bg-simplify-section-desktop.svg);
+    background-position: 25000% 100%;
+    background-repeat: no-repeat;
+
+
+        @include Mobile{    
+            flex-direction: column;
+            text-align: center;
+            background-image: url(../../images/bg-simplify-section-mobile.svg);
+            background-position: 0% 100%;
+        }
+
+
+
+    .left, .right{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 2.4rem;
+        color: #FFF;
+        width: 500px;
+
+        @include Mobile{    
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            padding-top: 30%;
+            width: 100%;
+
+        }
+
+    }
+
+    .right{
+        text-align: right;
+
+
+        @include Mobile{    
+            text-align: center;
+            padding-bottom: 25%;
+
+        }
+    }
+}

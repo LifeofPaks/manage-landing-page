@@ -1,80 +1,273 @@
 @import '../../styles/Responsive.scss';
 @import '../../styles/Variables.scss';
 
-.firstSection{
-    padding-inline: 10%;
-    padding-block: 1%;
-    display: flex;
-    align-items: flex-start;
-    gap: 5%;
-    overflow: hidden;
+.firstSectionContainer{
+    background-image: url(../../images//bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: -80% 120%;
 
+    @include Mobile{    
+        background-image: none;
+    }
 
-    .left{
-        width: 100%;
-        opacity: 0;
-        animation: fadeIn 2s 3s forwards;
-        
-        h2{
-            font-size: 2.3rem;
-            color: $Dark-Blue;
-            margin-bottom: 2rem;
+    .firstSection{
+        padding-inline: 10%;
+        padding-block: 1%;
+        display: flex;
+        align-items: flex-start;
+        gap: 5%;
+        overflow: hidden;
+    
+        @include Mobile{
+            flex-direction: column;
+            margin-top: 2rem;
+            padding-inline: 0;
         }
-
+    
         p{
-            line-height: 25px;
-            width: 350px;
+            @include Mobile{    
+                font-size: 14px;
+            }
+        }
+    
+    
+        .left{
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 2s 3s forwards;
+    
+            @include Mobile{    
+                text-align: center;
+                margin-bottom: 2rem;
+                padding-inline: 2rem;
+            }
+            
+            h2{
+                font-size: 2.3rem;
+                color: $Dark-Blue;
+                margin-bottom: 2rem;
+    
+                @include Mobile{    
+                    font-size: 1.7rem;
+                    padding-inline: 2rem;
+                    margin-bottom: 1rem;
+                }
+            }
+    
+            p{
+                line-height: 25px;
+                width: 350px;
+    
+                @include Mobile{    
+                    width: 100%;
+                }
+            }
+        }
+    
+        .right{
+            width: 100%;
+    
+            @include Mobile{    
+                padding-left: 1rem;
+            }
+    
+            .contentWrapper{
+                display: flex;
+                align-items: flex-start;
+                gap: 2rem;
+                margin-bottom: 2rem;
+                opacity: 0;
+                animation: fadeInUp 1s forwards;
+                
+                &.d1{
+                    animation-delay: 3.1s;
+                }
+    
+                &.d2{
+                    animation-delay: 3.2s;
+                }
+    
+                &.d3{
+                    animation-delay: 3.3s;
+                }
+    
+    
+    
+                span{
+                    display: block;
+                    background: $Bright-Red;
+                    color: $Vary-Light-Gray;
+                    padding: .5rem 1.5rem;
+                    border-radius: 30px;
+                    font-weight: bold;
+    
+                    @include Mobile{    
+                        display: none;
+                        padding: .5rem 1.2rem;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                }
+    
+                .content{
+                    h3{
+                        color: $Dark-Blue;
+                        font-size: 1rem;
+                        margin-bottom: 1rem;
+                        margin-top: 0.5rem;
+    
+                        @include Mobile{    
+                            display: none;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            font-size: 0.9rem;
+                        }
+                    }
+    
+                    p{
+                        line-height: 25px;
+                        font-weight: 300;
+                    }
+    
+                    .title{
+                        display: none;
+                        gap: 1rem;
+                        background: #db6d6d27;
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+    
+                        @include Mobile{    
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 1rem;
+                        }
+    ;
+    
+                        .mobileSpan,
+                        .mobileHeader{
+                            @include Mobile{    
+                                display: block
+                            }
+        ;
+                        }
+                       
+                    }
+                }
+            }
+          
         }
     }
 
-    .right{
-        width: 100%;
-
-        .contentWrapper{
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeInUp 1s forwards;
-            
-            &.d1{
-                animation-delay: 3.1s;
-            }
-
-            &.d2{
-                animation-delay: 3.2s;
-            }
-
-            &.d3{
-                animation-delay: 3.3s;
-            }
-
-
-
-            span{
-                display: block;
-                background: $Bright-Red;
-                color: $Vary-Light-Gray;
-                padding: .5rem 1.5rem;
-                border-radius: 30px;
-                font-weight: bold;
-            }
-
-            .content{
-                h3{
-                    color: $Dark-Blue;
-                    font-size: 1rem;
-                    margin-bottom: 1rem;
-                    margin-top: 0.5rem;
-                }
-
-                p{
-                    line-height: 25px;
-                    font-weight: 300;
-                }
-            }
+    .testimonial {
+        padding-block: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 5%;
+      
+        h2 {
+          font-size: 2.5rem;
+          color: $Dark-Blue;
+      
+              @include Mobile{    
+                  font-size: 2rem;
+              }
         }
       
-    }
+        .cardWrapper, .mobileCardWrapper{
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          gap: 1rem;
+          padding-top: 6rem;
+          padding-bottom: 2rem;
+
+       
+      
+          .card {
+            background: #cccccc23;
+            text-align: center;
+      
+            img {
+              width: 40px;
+              margin-top: -20px;
+              margin-bottom: 1rem;
+
+              @include Mobile{    
+                width: 80px;
+                margin-top: -40px;
+              }
+            }
+      
+            h3 {
+              font-size: 0.7rem;
+              color: $Dark-Blue;
+
+              @include Mobile{    
+                font-size: 1rem;
+              }
+            }
+      
+            p {
+              padding: 1.1rem;
+              padding-bottom: 1.5rem;
+              line-height: 18px;
+              font-size: 0.67rem;
+
+              @include Mobile{    
+                font-size: .9rem;
+                padding: 2rem;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      
+        .cardWrapper{
+          @include Mobile{    
+              display: none;
+          }
+        }
+      
+        .mobileCardWrapper{
+          display: none;
+      
+          @include Mobile{    
+              display: flex;
+              flex-direction: column;
+          }
+      
+          .cardContainer{
+              display: flex;
+              align-items: center;
+          }
+      
+          .radioWrapper{
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.3rem;
+              margin-top: 2rem;
+      
+              .radio{
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  border: 1px solid $Bright-Red;
+                  cursor: pointer;
+      
+                  &.active{
+                      background: $Bright-Red;
+                  }
+              }
+          }
+        }
+      
+        button {
+          margin-top: 2rem;
+        }
+      }
+      
 }
+
